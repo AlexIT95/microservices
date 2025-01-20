@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: listservice
+spec:
+  selector:
+    matchLabels:
+      app: listservice
+  template:
+    metadata:
+      labels:
+        app: listservice
+    spec:
+      serviceAccountName: default
+      containers:
+        - name: server
+          image: listservice
+          ports:
+          - containerPort: 50054
+          env:
+          - name: PROJECT_ID
+            value: "YOUR_PROJECT_ID"
+          resources:
+            requests:
+              cpu: 100m
+              memory: 64Mi
+            limits:
+              cpu: 200m
+              memory: 128Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: listservice
+spec:
+  type: ClusterIP
+  selector:
+    app: listservice
+  ports:
+  - name: grpc
+    port: 50054
+    targetPort: 50054
