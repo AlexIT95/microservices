@@ -14,12 +14,12 @@ spec:
       serviceAccountName: appmod-ksa
       containers:
         - name: server
-          image: us-central1-docker.pkg.dev/techub-demos-sidney/practical-guide/listservice:v4.1
+          image: southamerica-east1-docker.pkg.dev/techub-demos-host/my-repo/listservice:v4.1
           ports:
           - containerPort: 50054
           env:
           - name: PROJECT_ID
-            value: "techub-demos-sidney"
+            value: "techub-demos-host"
           resources:
             requests:
               cpu: 100m
@@ -58,12 +58,12 @@ spec:
       serviceAccountName: appmod-ksa
       containers:
         - name: server
-          image: us-central1-docker.pkg.dev/techub-demos-sidney/practical-guide/backendservice:v4.0
+          image: southamerica-east1-docker.pkg.dev/techub-demos-host/my-repo/backendservice:v4.0
           ports:
           - containerPort: 50052
           env:
           - name: PROJECT_ID
-            value: "techub-demos-sidney"
+            value: "techub-demos-host"
           resources:
             requests:
               cpu: 100m
@@ -103,7 +103,7 @@ spec:
       serviceAccountName: appmod-ksa
       containers:
         - name: server
-          image: us-central1-docker.pkg.dev/techub-demos-sidney/practical-guide/frontend:v4.1
+          image: southamerica-east1-docker.pkg.dev/techub-demos-host/my-repo/frontend:v4.1
           ports:
           - containerPort: 8080
           env:
@@ -165,12 +165,12 @@ spec:
       serviceAccountName: appmod-ksa
       containers:
         - name: server
-          image: us-central1-docker.pkg.dev/techub-demos-sidney/practical-guide/updateservice:v4.0
+          image: southamerica-east1-docker.pkg.dev/techub-demos-host/my-repo/updateservice:v4.0
           ports:
           - containerPort: 50053
           env:
           - name: PROJECT_ID
-            value: "techub-demos-sidney"
+            value: "techub-demos-host"
           resources:
             requests:
               cpu: 100m
