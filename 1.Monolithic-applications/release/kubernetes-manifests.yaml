@@ -32,7 +32,7 @@ spec:
       serviceAccountName: appmod-ksa
       containers:
         - name: server
-          image: southamerica-east1-docker.pkg.dev/techub-demos-host/my-repo/monolothicapp:v1.0
+          image: us-central1-docker.pkg.dev/techub-demos-host/practical-guide/monolothicapp:v1.0
           ports:
           - containerPort: 8080
           env:

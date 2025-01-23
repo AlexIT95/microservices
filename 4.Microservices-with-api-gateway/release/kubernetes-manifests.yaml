@@ -14,7 +14,7 @@ spec:
       serviceAccountName: appmod-ksa
       containers:
         - name: server
-          image: southamerica-east1-docker.pkg.dev/techub-demos-host/my-repo/listservice:v4.1
+          image: us-central1-docker.pkg.dev/techub-demos-host/practical-guide/listservice:v4.1
           ports:
           - containerPort: 50054
           env:
@@ -58,7 +58,7 @@ spec:
       serviceAccountName: appmod-ksa
       containers:
         - name: server
-          image: southamerica-east1-docker.pkg.dev/techub-demos-host/my-repo/backendservice:v4.0
+          image: us-central1-docker.pkg.dev/techub-demos-host/practical-guide/backendservice:v4.0
           ports:
           - containerPort: 50052
           env:
@@ -103,7 +103,7 @@ spec:
       serviceAccountName: appmod-ksa
       containers:
         - name: server
-          image: southamerica-east1-docker.pkg.dev/techub-demos-host/my-repo/frontend:v4.1
+          image: us-central1-docker.pkg.dev/techub-demos-host/practical-guide/frontend:v4.1
           ports:
           - containerPort: 8080
           env:
@@ -165,7 +165,7 @@ spec:
       serviceAccountName: appmod-ksa
       containers:
         - name: server
-          image: southamerica-east1-docker.pkg.dev/techub-demos-host/my-repo/updateservice:v4.0
+          image: us-central1-docker.pkg.dev/techub-demos-host/practical-guide/updateservice:v4.0
           ports:
           - containerPort: 50053
           env:
